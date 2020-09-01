@@ -1,0 +1,138 @@
+.advantages {
+    border-bottom: 3px solid $adv-line;
+    padding-bottom: 60px;
+    margin-bottom: 140px;
+
+    .adv__block {
+        display: flex;
+        justify-content: space-between;
+        flex-flow: row wrap;
+
+        .adv__element {
+            flex-basis: 23.5%;
+            margin: 20px 0;
+            text-align: center;
+            
+
+            &:hover {
+
+                border-color: $red;
+                transition-duration: 500ms;
+                transition-property: all;
+
+                .adv__icon {
+                    transform: rotate(45deg);
+                    transition-duration: 500ms;
+                    transition-property: all;
+                    border-color: $red;
+
+                    img {
+                        transform: translate(-50%, -50%) rotate(-45deg);
+                    }
+                }
+
+                .adv__title {
+                    color: $red;
+                    transition-duration: 500ms;
+                    transition-property: all;
+                }
+
+                
+            }
+            
+
+            .adv__icon {
+                width: 73px;
+                height: 73px;
+                border: 1px solid $adv-bd-gray;
+                position: relative;
+                margin: 20px auto;
+                img {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    color: $red;
+                    transform: translate(-50%, -50%);
+                }
+                
+                .img__2 {
+
+                    width: 32px;
+                    height: 12px;
+                }
+                .img__3 {
+
+                    width: 27px;
+                    height: 23px;
+                }
+                .img__4 {
+
+                    width: 30px;
+                    height: 35px;
+                }
+
+                .img__5 {
+
+                    width: 25px;
+                    height: 25px;
+                }
+
+    }
+    p {
+        font-family: "Source Sans Pro";
+        line-height: 20px;
+        letter-spacing: 0.9px;
+        font-size: 12px;
+        margin: 15px 0;
+        color: $adv-gray;
+    }
+
+    p.adv__title {
+        font-family: "Open Sans";
+        font-weight: 600;
+        text-transform: uppercase;
+        color: $gray;
+        font-size: 18px;        
+        letter-spacing: 1.35px;
+        line-height: 20px;
+
+        &::after {
+            content: '';
+            width: 41px;
+            height: 1px;
+            background-color: #888888;
+            border-bottom: 1px solid #e1e1e1;
+            display: block;
+            margin: 15px auto;
+        }
+    }
+}
+
+}
+}
+
+@media (max-width: 980px) {
+    .advantages {
+        padding-bottom: 50px;
+        margin-bottom: 50px;
+    }
+}
+@media (max-width: 768px) {
+    .advantages{
+        .adv__block{
+            .adv__element {
+                flex-basis: 49%;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .advantages{
+        .adv__block{
+            .adv__element {
+                flex-basis: 100%;
+            }
+        }
+    }
+}

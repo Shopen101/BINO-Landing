@@ -1,0 +1,152 @@
+.service {
+    background-color: $service-bg;
+    margin: 140px 0;
+    padding: 150px;
+    position: relative;
+
+    &::after {
+        content: '';
+        width: 46%;
+        display: block;
+        height: 100%;
+        background: url('../img/services-bg.jpg') right top no-repeat;
+        background-size: cover;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .service__block {
+        text-align: right;
+        width: 54%;
+
+        h2 {            
+            font-size: 36px;
+            line-height: 36px;
+            color: $white-gray;
+            letter-spacing: 3.6px;
+            font-weight: 700;
+            font-family: 'Source Sans Pro';
+            padding-right: 25px;
+            border-right: 6px solid $red;
+            margin-right: 80px;
+            margin-bottom: 30px;
+        }
+
+        .service__element {
+            max-width: 665px;
+            margin: 55px 80px 55px auto;            
+            position: relative;
+
+            p {
+                font-size: 14px;
+                line-height: 29px;
+                color: $adv-gray;
+                font-family: 'Source Sans Pro';                
+            }
+
+            h3 {
+                
+            text-transform: uppercase;
+            color: $red;
+            font-size: 18px;
+            line-height: 29px;
+            font-family: 'Open Sans';
+            }
+
+            .service__icon {
+                width: 64px;
+                height: 64px;
+                border: 5px solid rgba(0,0,0, 0.25);
+                position: absolute;
+                right: -129px;
+                top: 50%;
+                transform: translate(0, -50%);
+                z-index: 1;
+                border-radius: 50%;
+                background-color: #f4f5f9;
+
+                img {
+                    width: 30px;
+                    height: 30px;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }           
+            
+        }
+
+    }
+}
+
+@media (max-width: 980px) {
+
+    .service {
+        margin: 50px 0;
+        padding: 50px;
+       
+        .service__block {
+
+            .service__element {
+
+                .service__icon {
+                    right: -122px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+    .service {
+        padding-left: 15px;
+        padding-right: 15px;
+
+        &::after {
+            display: none;
+        }
+              
+        .service__block {
+            width: 100%;
+            text-align: left;
+            h2 {
+                padding-right: 0;
+                padding-left: 25px;
+                border-right: none;
+                border-left: 6px solid $red;                
+            }
+
+            .service__element {                
+                max-width: 100%;
+                margin: 25px 0;
+                padding-right: 80px;
+                box-sizing: border-box;
+
+                .service__icon {
+                    right: 0;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 370px) {
+
+    .service {        
+         
+        .service__block {
+           
+            h2 {                
+                margin-right: 10px;
+                             
+            }
+            
+        }
+    }
+}
+
+

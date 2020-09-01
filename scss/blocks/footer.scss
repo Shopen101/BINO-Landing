@@ -1,0 +1,48 @@
+footer {
+    background-color: $service-bg;
+    padding: 35px 0;
+
+    .footer__wrap {
+        display: flex;
+        justify-content: space-between;
+        flex-flow: row wrap;
+        align-items: center;
+
+        ul {
+            display: flex;
+            align-items: center;
+            li {
+                margin-right: 20px;
+            }
+        }
+    }
+
+    p {
+        font-size: 14px;
+        color: $adv-gray;
+        line-height: 24px;
+        font-weight: 600;
+    }
+}
+
+@media (max-width: 580px) {
+    footer {
+        padding: 15px 0;
+        .footer__wrap {
+            justify-content: center;
+
+            ul {
+                li {
+                    &:last-of-type {
+                        margin-right: 0;
+                    }
+                }
+            }
+            .footer__right {
+                p {
+                    margin: 20px 0 0;
+                }
+            }
+        }
+    }
+}

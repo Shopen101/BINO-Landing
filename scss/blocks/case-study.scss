@@ -1,0 +1,227 @@
+.case-study {
+    background-color: $white-gray;
+    padding: 140px 0;
+
+    .wrap {                
+
+            >p, h3, .description{
+                font-size: 14px;
+                line-height: 29px;
+                margin: 50px 0;
+                color: $adv-gray;
+                text-align: center;
+            }
+            h2 {
+                text-align: center;
+                color: $gray;
+                font-size: 36px;
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+
+            .recent__devider {        
+                @include devider($adv-gray);
+            }
+        }
+
+        .case-study__block {
+            margin-top: 60px;
+            display: flex;
+            align-items: center;
+
+            .case-study__left {
+                flex-basis: 56%;
+                position: relative;
+                z-index: 1;
+                background-color: #fff; 
+            }
+
+            .case-study__right {
+                img {
+                    margin-left: -80px;
+                }
+            }
+
+            .ideas {
+                padding: 30px 50px 50px;
+                box-sizing: border-box;
+
+                h3 {
+                    font-size: 18px;
+                    font-weight: 600;
+                    color: $gray;
+                    letter-spacing: 1.35px;
+                    text-transform: uppercase;
+
+                    &::after {
+                        content: '';                        
+                        width: 41px;
+                        height: 2px;
+                        display: block;
+                        background-color: #888888;
+                        border-bottom: 1px solid #e1e1e1;
+                        margin: 20px auto;
+                    }                    
+                }
+
+                p.description {
+                    color: $adv-gray;
+                    line-height: 24px;
+                    font-size: 14px;
+                    letter-spacing: 1.05px;
+                    font-family: 'Source Sans Pro';                    
+                }
+
+                .ideas__btn {
+
+                    @include btn() {
+                        width: 145px;
+                        font-size: 12px;
+                        padding: 13px 0;
+                        display: block;
+                        font-weight: 600;
+                        line-height: 16px;
+                        letter-spacing: 0.12px;
+                        margin: 30px auto;
+                    }
+                }
+
+                .ideas__icon {
+                    width: 127px;
+                    height: 127px;
+                    background-color: $red;
+                    margin: 50px auto;
+                    position: relative;
+                    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+                
+
+                    img {
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 35px;
+                        height: 40px;
+                    }
+                }
+            }
+        }
+
+}
+
+@media (max-width: 980px) {
+
+    .case-study {
+        padding: 50px 0;
+
+        .wrap {
+
+            .case-study__block {
+
+                .case-study__left {
+
+                    flex-basis: 50%;
+                }
+
+                .case-study__right {
+                    flex-basis: 50%;
+
+                    img {
+                        margin: 0;
+                        width: 100%;
+                        display: block;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+   
+
+    .case-study {
+        padding: 50px 0;
+
+        .wrap {
+            
+            .case-study__block {
+                display: block;
+                position: relative;
+                .case-study__left {                   
+                    background-color: rgba(0,0,0, 0.7);
+
+                    >p, h3 {
+                        color: #fff;
+                    }
+                }
+
+                .case-study__right { 
+                    width: 100%;
+                    height: 100%;   
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;   
+                    transform: translate(-50%, -50%);                            
+                    margin: 0;
+                    padding: 0;
+                    overflow: hidden;    
+                                   
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 550px) {   
+
+    .case-study {
+        padding: 50px 0;
+
+        .wrap {
+            
+            .case-study__block {
+                display: block;
+                position: relative;
+                .case-study__left {                   
+                    background-color: rgba(0,0,0, 0.7);
+
+                    >p, h3 {
+                        color: #fff;
+                    }
+                }
+
+                .case-study__right { 
+                    width: 100%;
+                    height: 100%;   
+                    position: absolute;
+                                                
+                    margin: 0;
+                    padding: 0;
+                   
+                    
+                    .picture {
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        overflow: hidden;                       
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;   
+                            transform: translate(-50%, -50%) scale(1.3);
+                        }
+                       
+                    }
+                                   
+                }
+            }
+        }
+    }
+}
+
